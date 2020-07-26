@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Employee";
+
+    var emp = ViewBag.EmployeeDetails;
+}
+
+<h2>Employee</h2>
+@*@ViewBag.EmployeeDetails.EmpId <br />
+
+    @ViewBag.EmployeeDetails.Empname <br />
+
+    @ViewBag.EmployeeDetails.Empsalary*@
+
+@*@emp.EmpId
+    <br />
+
+    @emp.Empname
+    <br />
+
+    @emp.Empsalary*@
+
+@foreach (var item in emp)
+{
+
+    @item.EmpId
+    <br />
+    @item.Empname
+    <br />
+    @item.Empsalary
+    <br />
+    <br />
+    <br />
+}
+

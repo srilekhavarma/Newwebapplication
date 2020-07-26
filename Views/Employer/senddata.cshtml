@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "senddata";
+    var emp = ViewBag.EmpDetails;
+}
+
+<h2>senddata</h2>
+
+@*@emp.EmpId
+    <br />
+    @emp.Empname<br />
+
+    @emp.Empsalary*@
+
+@foreach (var item in ViewBag.EmpDetails)
+{
+    @item.EmpId
+    <br />
+
+    @item.Empname
+    <br />
+    @item.Empsalary
+    <br />
+    <br />
+    <br />
+
+
+}
