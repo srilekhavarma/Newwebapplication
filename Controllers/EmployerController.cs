@@ -80,11 +80,64 @@ namespace Newwebapplication.Controllers
             return View();
         }
 
+        public ActionResult GetDataViewModel()
+        {
+            EmpDep objedt = new EmpDep();
+            EmployeeDetails objsiri = new EmployeeDetails();
+            objsiri.EmpId = 1111;
+            objsiri.Empname = "siri";
+            objsiri.Empsalary = 100000;
+
+            DepartmentDetails dt = new DepartmentDetails();
+            dt.DeptId = 1212;
+            dt.DeptName = "Dotnet";
+
+            objedt.Emp = objsiri;
+            objedt.Dept = dt;
+
+            return View(objedt);
+        }
+
+        public ActionResult GetMultipleDataViewModel()
+        {
+
+            List<EmployeeDetails> listempobj = new List<EmployeeDetails>();
+            List<DepartmentDetails> listdeptobj = new List<DepartmentDetails>();
 
 
+
+            EmpDeplist objedt = new EmpDeplist();
+            EmployeeDetails objsiri = new EmployeeDetails();
+            objsiri.EmpId = 1111;
+            objsiri.Empname = "siri";
+            objsiri.Empsalary = 100000;
+
+            EmployeeDetails objprasanna = new EmployeeDetails();
+            objprasanna.EmpId = 2222;
+            objprasanna.Empname = "Prasanna";
+            objprasanna.Empsalary = 200000;
+
+            DepartmentDetails dt = new DepartmentDetails();
+            dt.DeptId = 1212;
+            dt.DeptName = "Dotnet";
+
+            DepartmentDetails dt1 = new DepartmentDetails();
+            dt1.DeptId = 1213;
+            dt1.DeptName = "Java";
+
+            listempobj.Add(objsiri);
+            listempobj.Add(objprasanna);
+            listdeptobj.Add(dt);
+            listdeptobj.Add(dt1);
+
+            objedt.Emp = listempobj;
+            objedt.Dept = listdeptobj;
+
+            return View(objedt);
+        }
 
 
 
 
     }
-}
+    }

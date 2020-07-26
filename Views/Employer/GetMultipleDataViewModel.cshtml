@@ -1,0 +1,30 @@
+﻿@model Newwebapplication.Models.EmpDeplist
+@{
+    ViewBag.Title = "GetMultipleDataViewModel";
+}
+
+<h2>GetMultipleDataViewModel</h2>
+
+@foreach (var item in Model.Emp)
+{
+    @item.EmpId
+    <br />
+    @item.Empname
+    <br />
+    @item.Empsalary
+    <br />
+    <br />
+}
+<br />
+<br />
+
+@foreach (var item in Model.Dept)
+{
+    @item.DeptId
+    <br />
+
+    @item.DeptName
+    <br />
+    <br />
+
+}
